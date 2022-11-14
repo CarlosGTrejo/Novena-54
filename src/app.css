@@ -1,0 +1,30 @@
+@import './lib/reset.css';
+@import './lib/normalize.css';
+
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  /* TODO: Figure out the color-scheme thingy */
+  color-scheme: light dark;
+  color: var(--text);
+  background-color: var(--bg);
+  --primary: #E9B872;
+  --bg: #151515 ;
+  --text: #fff;
+  --footer: #767B91;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+
+
+#app {
+  margin: 0;
+}
