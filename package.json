@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "git add dist && git stash -- dist && git checkout dist && git stash pop && git mv dist docs && git add dist && git commit -m \"update\""
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^1.1.0",
