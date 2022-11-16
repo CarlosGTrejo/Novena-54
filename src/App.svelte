@@ -17,6 +17,17 @@
   function mod(n, m) { // JS modulo replacement, because % returns negative numbers for some reason....
     return ((n % m) + m) % m;
   }
+
+  //TODO: Fix icon not being detected before adding sw stuff
+  // Register service worker for PWA
+//   if ("sw" in navigator) {
+//   window.addEventListener("load", function() {
+//     navigator.serviceWorker
+//       .register("./sw.js")
+//       .then(res => console.log("service worker registered"))
+//       .catch(err => console.log("service worker not registered", err))
+//   })
+// }
 </script>
 
 <main>
