@@ -49,14 +49,14 @@
   </Accordion>
 
   <nav>
-    <button on:click={() => handleClick(-1)}>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+    <button on:click={() => handleClick(-1)} aria-label="previous">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" focusable="false" aria-hidden="true">
         <!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
         <path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 278.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/></svg>
     </button>
-    <h2>MISTERIOS {mystery}</h2>
-    <button on:click={() => handleClick(1)}>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+    <h2>MISTERIOS <br> {mystery}</h2>
+    <button on:click={() => handleClick(1)} aria-label="next">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" focusable="false" aria-hidden="true">
         <!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
         <path fill="white" d="M342.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L274.7 256 105.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg>
     </button>
@@ -331,33 +331,34 @@
     justify-content: space-between;
     margin: 1em 2em;
   }
+  nav h2 {
+    text-align: center;
+  }
   button {
-    padding: 0 0.5em;
     border: none;
     background: none;
-    font-weight: bold;
+    line-height: 0%;
+  }
+  path {
+    fill: var(--primary);
+  }
+  svg {
+    height: 1.25em;
+    margin: 0;
+    padding: 0;
   }
   h2 {
     text-align: justify;
     color: var(--primary);
     font-size: 1.2em;
   }
-  main {
-    min-height: 90vh;
-  }
   footer {
     text-align: center;
     color: var(--footer);
     font-size: small;
-    margin: 2em;
+    margin: 4em 2em 2.5em;
   }
   b {
     color: var(--primary)
-  }
-  path {
-    fill: var(--primary);
-  }
-  svg {
-    height: .8em;
   }
 </style>
