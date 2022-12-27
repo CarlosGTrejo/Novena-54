@@ -9,6 +9,7 @@
   let weekday = date.toLocaleString("default", {"weekday": "short"})
 
   let idx = day_idx[weekday];
+  idx ||= 0;
   $: mystery = mysteries[idx];
   function handleClick(num) {
     idx = (mod((idx + num) - 4, 4));
